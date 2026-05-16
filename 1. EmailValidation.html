@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+
+    <form>
+        <!-- Name -->
+        <label>Name:</label><br>
+        <input type="text" name="name" required 
+               pattern="[A-Za-z ]{3,}" 
+               title="Enter a valid name">
+        <br><br>
+
+        <!-- Email -->
+        <label>Email:</label><br>
+        <input type="email" name="email" required 
+               title="Enter a valid email address">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

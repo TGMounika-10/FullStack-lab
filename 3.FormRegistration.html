@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biodata Registration Form</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        .container{
+            width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input, textarea, select{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .gender{
+            width: auto;
+        }
+
+        .btn{
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Biodata Registration Form</h2>
+
+    <form>
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" required>
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter phone number">
+
+        <label>Date of Birth</label>
+        <input type="date">
+
+        <label>Gender</label><br>
+
+        <input type="radio" name="gender" class="gender"> Male
+        <input type="radio" name="gender" class="gender"> Female
+        <input type="radio" name="gender" class="gender"> Other
+
+        <br><br>
+
+        <label>Address</label>
+        <textarea rows="4" placeholder="Enter address"></textarea>
+
+        <label>Qualification</label>
+        <select>
+            <option>Select</option>
+            <option>SSLC</option>
+            <option>HSC</option>
+            <option>Diploma</option>
+            <option>UG</option>
+            <option>PG</option>
+        </select>
+
+        <label>Skills</label><br>
+
+        <input type="checkbox" class="gender"> HTML
+        <input type="checkbox" class="gender"> CSS
+        <input type="checkbox" class="gender"> JavaScript
+
+        <br><br>
+
+        <label>Upload Resume</label>
+        <input type="file">
+
+        <input type="submit" value="Register" class="btn">
+
+    </form>
+
+</div>
+
+</body>
+</html>
