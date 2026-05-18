@@ -1,44 +1,31 @@
-const http = require("http");
+const http = require('http');
 
-// Student Data
-const students = [
-  {
-    id: 1,
-    name: "Mounika",
-    course: "MCA"
-  },
-  {
-    id: 2,
-    name: "Sheresh",
-    course: "BSc Agriculture"
-  }
-];
-
-// Create Server
 const server = http.createServer((req, res) => {
 
-  // Home Route
-  if (req.url === "/") {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Welcome to Node.js Server");
-  }
+    // Student details
+    const studentName = "Arun";
+    const marks = [85, 90, 78, 88, 92];
 
-  // Student Route
-  else if (req.url === "/students") {
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify(students));
-  }
+    // Calculate total
+    let total = 0;
 
-  // Not Found
-  else {
-    res.writeHead(404, { "Content-Type": "text/plain" });
-    res.end("Page Not Found");
-  }
+    for (let i = 0; i < marks.length; i++) {
+        total += marks[i];
+    }
+
+    const average = total / marks.length;
+
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+
+    res.write(`<h1>Student Marks Details</h1>`);
+    res.write(`<p><b>Name:</b> ${studentName}</p>`);
+    res.write(`<p><b>Marks:</b> ${marks.join(", ")}</p>`);
+    res.write(`<p><b>Total Marks:</b> ${total}</p>`);
+    res.write(`<p><b>Average:</b> ${average}</p>`);
+
+    res.end();
 });
 
-// Port Number
 server.listen(3000, () => {
-  console.log("Server running at http://localhost:3000");
+    console.log("Server running at http://localhost:3000");
 });
-
-// http://localhost:3000/students
